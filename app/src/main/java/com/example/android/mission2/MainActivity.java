@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         itemList.add(item);
         m_ListView.setAdapter(m_Adapter);
 
+        //Init EditText
+        titleText.setText("");
+        subText.setText("");
     }
 
 }
