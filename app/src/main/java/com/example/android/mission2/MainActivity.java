@@ -1,9 +1,11 @@
 package com.example.android.mission2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -38,6 +40,20 @@ public class MainActivity extends AppCompatActivity {
         m_ListView.setAdapter(m_Adapter);
 
         m_ListView.setEmptyView((TextView)findViewById(R.id.emptytextview));
+
+        m_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+
+                HashMap<String, String> item = (HashMap<String, String>) adapterView.getItemAtPosition(i);
+
+                intent.putExtra("item1", item.get("item1"));
+                intent.putExtra("item2", item.get("item2"));
+
+                startActivity(intent);
+            }
+        });
 
         // ListView 아이템 터치 시 이벤트 추가
         //m_ListView.setOnItemClickListener(onClickListItem);
