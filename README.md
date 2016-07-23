@@ -7,3 +7,10 @@
 4. **(추가)리스트 항목 누르면 세부 정보로 이동**(3번째 미션)
   1. 리스트 항목 누르면 세부 정보 Activity로 이동
   2. 상단 액션bar에 back 버튼 생성, 누르면 이전으로 돌아감 
+
+**ScreenShots**
+![Screenshot 1](./1.png)
+![Screenshot 2](./2.png)
+![Screenshot 3](./3.png)
+![Screenshot 4](./4.png)
+![Screenshot 5](./5.png)
