@@ -31,26 +31,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="@dimen/activity_vertical_margin">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText1"
-            android:hint="Title"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_above="@+id/editText2"/>
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editTextLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText2"
-            android:hint="Description"
-            android:layout_alignParentBottom="false"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_above="@id/button1"
-            android:layout_alignRight="@+id/editText1"
-            android:layout_alignEnd="@+id/editText1" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="Title" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editTextLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:hint="Description" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:layout_width="wrap_content"
